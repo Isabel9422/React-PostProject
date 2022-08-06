@@ -1,10 +1,10 @@
 import Posts from './components/Posts'
 import './App.css'
-import Login from './components/Login'
+import Login from './components/forms/Login'
 import Cards from './components/Cards'
 import Tags from './components/Tags'
-import Register from './components/Register'
-import CreatePosts from './components/CreatePosts'
+import Register from './components/forms/Register'
+import CreatePosts from './components/forms/CreatePosts'
 import NavBar from './components/NavBar'
 
 
@@ -16,8 +16,8 @@ function App() {
       {/* <Login/> */}
       {/* <Posts/> */}
       {/* <Cards/> */}
-      <Tags/>
-      {/* <Register/> */}
+      {/* <Tags/> */}
+      <Register/>
       {/* <CreatePosts/> */}
     </div>
   )
