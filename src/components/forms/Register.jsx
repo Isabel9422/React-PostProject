@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { handleSubmit, registro } from "../../services/users.js";
+import { registro } from "../../services/users.js";
 
 function Register() {
   const {

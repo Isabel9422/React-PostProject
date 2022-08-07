@@ -31,5 +31,3 @@ export async function registro(data) {
     };
     await fetch(api, response).then(response => response.json());
     }
-
-export function handleSubmit(){(async (data) => await fetchAPI(data))};
