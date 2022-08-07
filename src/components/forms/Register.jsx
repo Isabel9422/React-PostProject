@@ -1,10 +1,22 @@
 import { useForm } from "react-hook-form";
-import { handleSubmit } from "../../services/users.js";
+import { handleSubmit, registro } from "../../services/users.js";
 
 function Register() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    defaultValues: {
+      nombre: "",
+      apellidos: "",
+      email: "",
+      username: "",
+      password: "",
+    },
+  });
   const onSubmit = (data) => console.log(data);
-  register('test')
+  registro(onSubmit)
 
   return (
     <div className="max-h-lg min-w-[45%]">
@@ -13,48 +25,37 @@ function Register() {
           <h1 className="mb-8 text-2xl text-center text-blue-900">
             Registrate
           </h1>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
-              name="nombre"
-              // ref={register({
-              //   required: true,
-              // })}
+              {...register("nombre", { required: true })}
               type="text"
               className="block border border-grey-light w-full p-2 rounded mb-4"
               placeholder="Nombre"
             />
             <input
               name="apellidos"
-              // ref={register({
-              //   required: true,
-              // })}
+              {...register("apellidos", { required: true })}
               type="text"
               className="block border border-grey-light w-full p-2 rounded mb-4"
               placeholder="Apellidos"
             />
             <input
               name="email"
-              // ref={register({
-              //   required: true,
-              // })}
+              {...register("email", { required: true })}
               type="text"
               className="block border border-grey-light w-full p-2 rounded mb-4"
               placeholder="Email"
             />
             <input
-              name="usuario"
-              // ref={register({
-              //   required: true,
-              // })}
+              name="username"
+              {...register("username", { required: true })}
               type="text"
               className="block border border-grey-light w-full p-2 rounded mb-4"
               placeholder="Usuario"
             />
             <input
               name="password"
-              // ref={register({
-              //   required: true,
-              // })}
+              {...register("password", { required: true })}
               type="password"
               className="block border border-grey-light w-full p-2 rounded mb-4"
               placeholder="Contraseña"
