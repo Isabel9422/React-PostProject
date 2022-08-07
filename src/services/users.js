@@ -26,7 +26,7 @@ export async function login() {
 export async function registro(data) {
     const response = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     };
     await fetch(api, response).then(response => response.json());

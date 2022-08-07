@@ -1,7 +1,6 @@
-// import { LockClosedIcon } from '@heroicons/react/solid'
 const log = "https://postproject-deploy.herokuapp.com/api/log";
 
-export default function Example() {
+export default function Login() {
   return (
     <>
       <div className="flex items-center justify-center sm:px-6 lg:px-8 pt-0">
