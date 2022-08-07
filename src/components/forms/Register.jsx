@@ -5,7 +5,7 @@ function Register() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
     defaultValues: {
       nombre: "",
@@ -13,10 +13,10 @@ function Register() {
       email: "",
       username: "",
       password: "",
+      tipoRol: "",
     },
   });
-  const onSubmit = (data) => console.log(data);
-  registro(onSubmit)
+  const onSubmit = (data) => registro(data);
 
   return (
     <div className="max-h-lg min-w-[45%]">

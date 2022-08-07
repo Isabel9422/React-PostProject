@@ -27,10 +27,9 @@ export async function registro(data) {
     const response = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data })
+        body: JSON.stringify(data)
     };
-    fetch(api, response)
-        .then(response => response.json())
+    await fetch(api, response).then(response => response.json());
     }
 
 export function handleSubmit(){(async (data) => await fetchAPI(data))};
