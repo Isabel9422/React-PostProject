@@ -6,19 +6,31 @@ function CreatePosts() {
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
       titulo: "",
       descripcion: "",
-      categoriaId: 2,
+      categoriaId: "",
     },
   });
-  const onSubmit = (data) => createBlogPost(data);
+
+  const onSubmit = (data) => {
+    createBlogPost(data)
+    reset({
+      titulo: "",
+      descripcion: "",
+      categoriaId: ""
+    })
+  }
+  console.log(watch(["titulo","descripcion","categoriaId"]))
 
   return (
     <div className="bg-white p-8 rounded-md flex flex-col gap-5 min-w-[60%] min-h-[60%] max-h-lg mb-8">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form name="CreatePost" onSubmit={handleSubmit(onSubmit)}>
         <label
           for="small-input"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-800"
@@ -54,12 +66,12 @@ function CreatePosts() {
             Selecciona las categorías
           </label>
           <div className="pt-2 pb-2 mb-8">
-            <Tags {...register("categoriaId", { required: true })} />
+            <Tags onClick={(tagId) => setValue("categoriaId", (tagId))}/>
           </div>
         </div>
         <button
           type="submit"
-          class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 max-w-[85px]"
+          className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 max-w-[85px]"
         >
           Enviar
         </button>

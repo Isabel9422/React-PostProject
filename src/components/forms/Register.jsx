@@ -16,8 +16,17 @@ function Register() {
       tipoRol: "",
     },
   });
-  const onSubmit = (data) => registro(data);
-
+  const onSubmit = (data) =>{
+   registro(data)
+   reset({
+    nombre: "",
+    apellidos: "",
+    email: "",
+    username: "",
+    password: "",
+    tipoRol: "",
+  })
+  }
   return (
     <div className="max-h-lg min-w-[45%]">
       <div className="container mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -25,7 +34,7 @@ function Register() {
           <h1 className="mb-8 text-2xl text-center text-blue-900">
             Registrate
           </h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form name="formulario" onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("nombre", { required: true })}
               type="text"

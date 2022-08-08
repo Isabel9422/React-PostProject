@@ -7,10 +7,10 @@ import {
   FaPython,
 } from "react-icons/fa";
 
-function Tags() {
+function Tags(props) {
   return (
     <div>
-      <div onClick={(e) => console.log(e.target.dataset.id)}>
+      <div onClick={(e) => props.onClick(e.target.closest("[data-id]").dataset.id)}>
         <div className="pb-4">
           <a
             href="#"

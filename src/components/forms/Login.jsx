@@ -1,6 +1,30 @@
-const log = "https://postproject-deploy.herokuapp.com/api/log";
+import { useForm } from "react-hook-form";
+import { logi } from "../../services/users";
 
 export default function Login() {
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const onSubmit = (data) => {
+    logi(data)
+    reset({
+      email: "",
+      password: "",
+    })
+  }
+  console.log(watch(["email","password"]))
+
   return (
     <>
       <div className="flex items-center justify-center sm:px-6 lg:px-8 pt-0">
@@ -16,14 +40,15 @@ export default function Login() {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600"></p>
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
-                <label for="email-address" className="sr-only">
+                <label for="email" className="sr-only">
                   Email
                 </label>
                 <input
+                  {...register("email", { required: true })}
                   id="email-address"
                   name="email"
                   type="email"
@@ -38,6 +63,7 @@ export default function Login() {
                   Contraseña
                 </label>
                 <input
+                  {...register("password", { required: true })}
                   id="password"
                   name="password"
                   type="password"

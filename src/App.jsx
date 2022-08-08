@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App min-h-screen flex justify-center from-black via-sky-900 to-black flex-wrap gap-7">
             <NavBar/>
-      {/* <Login/> */}
+      <Login/>
       {/* <Posts/> */}
       {/* <Cards/> */}
       {/* <Tags/> */}
@@ -21,7 +21,7 @@ function App() {
       {/* <Routes>
         <Route path="/" element={(<Login/>)}></Route>
       </Routes> */}
-      <CreatePosts/>
+      {/* <CreatePosts/> */}
     </div>
   )
 }

@@ -1,6 +1,6 @@
-const api = "https://postproject-deploy.herokuapp.com/api/articulos"; // AHI VAN MIS APIS
+const api = "https://post-project-dep.herokuapp.com/api/articulos"; // AHI VAN MIS APIS
 const url_categories =
-  "https://postproject-deploy.herokuapp.com/api/categories";
+  "https://post-project-dep.herokuapp.com/api/categories";
 
 export async function getPosts() {
   try {
@@ -9,7 +9,7 @@ export async function getPosts() {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer MQ.Z2sRts6PL2ZiEoPAQ9kT4UCBUk45CbH_WaTVj5K3CAnIO6cjHdcj0W6c2dzk",
+          "Bearer MQ._5vnI0TOOGlVmCJQVwO_Bd6vTlkQwxlWesxReyvYEtUs7vYl8jR43sXcbZag",
       },
     });
     const data = await response.json();
@@ -33,20 +33,7 @@ export async function createBlogPost(data) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer MQ.Z2sRts6PL2ZiEoPAQ9kT4UCBUk45CbH_WaTVj5K3CAnIO6cjHdcj0W6c2dzk",
-    },
-    body: JSON.stringify(data),
-  };
-  await fetch(api, response).then((response) => response.json());
-}
-
-export async function registro(data) {
-  const response = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization:
-        "Bearer MQ.Z2sRts6PL2ZiEoPAQ9kT4UCBUk45CbH_WaTVj5K3CAnIO6cjHdcj0W6c2dzk",
+        "Bearer MQ._5vnI0TOOGlVmCJQVwO_Bd6vTlkQwxlWesxReyvYEtUs7vYl8jR43sXcbZag",
     },
     body: JSON.stringify(data),
   };
