@@ -18,6 +18,9 @@ function App() {
       {/* <Cards/> */}
       {/* <Tags/> */}
       {/* <Register/> */}
+      {/* <Routes>
+        <Route path="/" element={(<Login/>)}></Route>
+      </Routes> */}
       <CreatePosts/>
     </div>
   )
