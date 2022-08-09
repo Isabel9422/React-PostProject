@@ -13,7 +13,6 @@ function Categories() {
       {categories.slice(1,2).map((category) => (
         <p>{category.nombre}</p>
       ))}
-      <button onClick={console.log(categories.filter(() => categories.id === 2 ))}>filter</button>
     </div>
   )
 }

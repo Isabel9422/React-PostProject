@@ -33,7 +33,7 @@ export async function createBlogPost(data) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer MTg.aomdEQCPA4qwyibkx4KJh0-_L3JZB3H7Sve9-iKS9EJTFy3tXJy_vuBqg5Ap", //aplication context 
+      `Bearer ${value}`,
     },
     body: JSON.stringify(data),
   };

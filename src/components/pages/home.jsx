@@ -7,17 +7,15 @@ function home() {
   return (
     <>
       <NavBar />
-      <div className="mt-1 inset-y-20 left-5">
-        <a>
+      <div className="mt-1">
+        <a className="mt-1 absolute inset-y-20 left-36 grid grid-cols-2 gap-10 min-h-fit">
           <Cards />
         </a>
-        </div>
-        <div>
-        <a className="mt-1 absolute inset-y-40 right-2">
+        <a className="mt-1 absolute inset-y-40 right-20">
           <h1 className="font-bold mb-5 pl-40 text-white underline hover:underline-offset-2	">Categorias</h1>
           <Tags />
         </a>
-        </div>
+      </div>
     </>
   );
 }
