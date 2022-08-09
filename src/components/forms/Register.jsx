@@ -5,6 +5,7 @@ function Register() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -28,7 +29,7 @@ function Register() {
   })
   }
   return (
-    <div className="max-h-lg min-w-[45%]">
+    <div className="max-h-lg min-w-[45%] pt-20">
       <div className="container mx-auto flex-1 flex flex-col items-center justify-center px-2">
         <div className="bg-white px-6 py-4 rounded shadow-md text-black w-full">
           <h1 className="mb-8 text-2xl text-center text-blue-900">

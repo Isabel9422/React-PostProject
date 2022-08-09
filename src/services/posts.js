@@ -9,7 +9,7 @@ export async function getPosts() {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer MQ._5vnI0TOOGlVmCJQVwO_Bd6vTlkQwxlWesxReyvYEtUs7vYl8jR43sXcbZag",
+          "Bearer MTg.aomdEQCPA4qwyibkx4KJh0-_L3JZB3H7Sve9-iKS9EJTFy3tXJy_vuBqg5Ap",
       },
     });
     const data = await response.json();
@@ -33,7 +33,7 @@ export async function createBlogPost(data) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer MQ._5vnI0TOOGlVmCJQVwO_Bd6vTlkQwxlWesxReyvYEtUs7vYl8jR43sXcbZag",
+        "Bearer MTg.aomdEQCPA4qwyibkx4KJh0-_L3JZB3H7Sve9-iKS9EJTFy3tXJy_vuBqg5Ap", //aplication context 
     },
     body: JSON.stringify(data),
   };

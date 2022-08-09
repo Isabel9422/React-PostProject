@@ -1,6 +1,8 @@
 import Tags from "../Tags";
 import { createBlogPost } from "../../services/posts.js";
 import { useForm } from "react-hook-form";
+import { createContext } from 'react';
+const Context = createContext('Default Value');
 
 function CreatePosts() {
   const {

@@ -37,5 +37,5 @@ export async function logi(data) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   };
-  await fetch(log, response).then((response) => response.json());
+  return await fetch(log, response).then((response) => response.json());
 }

@@ -16,12 +16,15 @@ export default function Login() {
     },
   });
 
-  const onSubmit = (data) => {
-    logi(data)
+  const onSubmit = async (data) => {
+    const res = await logi(data)
+    const token = res.token.token
     reset({
       email: "",
       password: "",
     })
+    console.log(token)
+    localStorage.setItem(token)
   }
   console.log(watch(["email","password"]))
 
