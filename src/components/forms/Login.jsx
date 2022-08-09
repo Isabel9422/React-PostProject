@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { logi } from "../../services/users";
+import { useContext, createContext } from 'react';
+const TokenContext = createContext();
 
 export default function Login() {
 
@@ -23,8 +25,8 @@ export default function Login() {
       email: "",
       password: "",
     })
-    console.log(token)
-    localStorage.setItem(token)
+    localStorage.setItem("token", token)
+    console.log(localStorage.getItem("token"))
   }
   console.log(watch(["email","password"]))
 

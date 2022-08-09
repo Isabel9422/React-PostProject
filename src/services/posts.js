@@ -2,14 +2,14 @@ const api = "https://post-project-dep.herokuapp.com/api/articulos"; // AHI VAN M
 const url_categories =
   "https://post-project-dep.herokuapp.com/api/categories";
 
-export async function getPosts() {
+export async function getPosts(value) {
   try {
     const response = await fetch(api, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer MTg.aomdEQCPA4qwyibkx4KJh0-_L3JZB3H7Sve9-iKS9EJTFy3tXJy_vuBqg5Ap",
+          `Bearer ${value}`,
       },
     });
     const data = await response.json();
@@ -41,7 +41,7 @@ export async function createBlogPost(data) {
 }
 
 function completePost(post) {
-  console.log("Complete this Task:", post);
+  console.log("Complete this post:", post);
   const index = post.indexOf(post);
   const tempTasks = [...post];
   tempTasks[index].completed = !tempTasks[index].completed;

@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 
 function token() {
-    const Context = createContext("default Value");
-
+    const Context = createContext("token");
+    console.log("token")
     const value = useContext(Context);
   return (
     <span>

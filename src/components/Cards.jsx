@@ -3,11 +3,12 @@ import { getPosts } from "../services/posts";
 import Categories from "./Categories";
 
 function Cards() {
+  const token = localStorage.getItem("token")
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    getPosts()
+    getPosts(token)
       .then(setPosts)
-      .catch((error) => console.log(error)); //Aqui recibimos todos los posts
+      .catch((error) => console.log(error));
   }, []);
   return (
     <>
@@ -29,7 +30,7 @@ function Cards() {
                   <h1 className="text-lg font-bold mb-2">
                   {post.titulo}
                   </h1>
-                  <p className="text-sm lg:text-lg overflow-hidden max-h-[100px] truncate	">
+                  <p className="text-sm lg:text-lg overflow-hidden max-h-[100px]	">
                   {post.descripcion}
                   </p>
                 </div>

@@ -1,4 +1,4 @@
-const api = "https://post-project-dep.herokuapp.com/api/users"; // AHI VAN MIS APIS
+const api = "https://post-project-dep.herokuapp.com/api/users";
 const log = "https://post-project-dep.herokuapp.com/api/log";
 
 //con watch crear funcion para comprobar si el username/email ya se encuentra en la DB
