@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App min-h-screen flex justify-center from-black via-sky-900 to-black flex-wrap gap-7">
   <Router>
-    <NavBar/>
+    {/* <NavBar/> */}
     <TokenContext.Provider value={token}>
     <Route path="/login" component={Login}/>
     <Route path="/register" component={Register}/>

@@ -1,7 +1,7 @@
 function NavBar() {
   const user = true;
   return (
-    <div className="w-full max-h-min">
+    <div className="w-full max-h-[150px]">
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
         <div className="container flex items-center">
           <a className="flex items-center">
