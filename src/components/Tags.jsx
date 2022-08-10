@@ -72,7 +72,7 @@ function Tags(props) {
               className="hover:bg-gradient-to-bl from-white to-slate-500 focus:bg-gradient-to-bl text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-xl bg-white text-gray-700 border"
             >
               <img
-                src="https://cdn.icon-icons.com/icons2/512/PNG/512/prog-js02_icon-icons.com_50788.png"
+                src="../assets/prog-js02_icon-icons.com_50788.png"
                 className="mr-1 max-h-[10px]"
                 alt="iconoJavaScript"
               />
